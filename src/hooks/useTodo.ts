@@ -6,13 +6,17 @@ function useTodo() {
   const [filter, setFilter] = useState<"all" | "active" | "completed">("all");
 
   const addTodo = (text: string) => {
-    setTodos([...todos, { text, completed: false }]);
+    const length = todos.length;
+    const lastId = length ? todos[length - 1].id : 1;
+    setTodos((prev) => [...prev, { text, completed: false, id: lastId + 1 }]);
   };
 
-  const toggleTodo = (index: number) => {
-    const newTodos = [...todos];
-    newTodos[index].completed = !newTodos[index].completed;
-    setTodos(newTodos);
+  const toggleTodo = (id: number) => {
+    setTodos((prev) =>
+      prev.map((el) =>
+        el.id === id ? { ...el, completed: !el.completed } : el
+      )
+    );
   };
 
   const filteredTodos = todos.filter((todo) => {
