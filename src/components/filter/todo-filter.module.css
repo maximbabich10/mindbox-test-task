@@ -1,0 +1,41 @@
+.filters {
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 20px;
+}
+
+.wrapButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.filters button {
+  padding: 2px;
+  background-color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  color: #ccc;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filters span {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.filterButton:not(.active) {
+  border: none;
+}
+
+.filterButton:hover {
+  background-color: #ddd;
+}
+
+.filterButton.active {
+  color: black;
+  border: 1px solid #ccc;
+}

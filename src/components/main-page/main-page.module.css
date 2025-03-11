@@ -1,0 +1,24 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 800px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #ccc;
+  background-color: lightgrey;
+}
+
+.wrapForm {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffff;
+}

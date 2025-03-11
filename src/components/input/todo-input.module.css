@@ -1,0 +1,7 @@
+.wrapInput {
+  display: flex;
+}
+
+.input {
+  flex: 1;
+}
